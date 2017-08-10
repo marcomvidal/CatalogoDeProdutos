@@ -1,0 +1,86 @@
+@charset UTF-8;
+
+
+body {
+    font-family: 'Lato';
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid;
+    border-top-color: rgb(231, 231, 231);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.fa-btn {
+    margin-right: 6px;
+}
+
+.col-md-3 {
+    margin-bottom: 10px;
+}
+
+a {
+	color: crimson;
+}
+
+a:focus, a:hover {
+    color: #b30929;
+}
+
+h4 {
+    text-align: center;
+}
+
+.form-control:focus {
+    border-color: crimson;
+}
+
+a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
+    border-color: crimson;
+}
+
+.navbar-default .navbar-brand {
+	color: crimson;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: crimson;
+    border-color: #b30929;
+}
+
+.pagination>li>a, .pagination>li>span {
+    color: crimson;
+    background-color: #fff;
+}
+
+.btn-default:hover {
+    color: white;
+    background-color: crimson;
+    border-color: #b30929;
+}
+
+.div-semimagem {
+    background-color: rgb(231, 231, 231);
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: white;
+    background-color: crimson;
+}
+
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+    color: crimson;
+}
+
+.btn-primary {
+    border-color: #b30929;
+    background-color: crimson;
+}
+
+.thumbnail {
+    margin-bottom: 10px;
+}
