@@ -24,40 +24,41 @@
         <div class="container">
             <div class="navbar-header">
 
-                <!-- Collapsed Hamburger -->
+                {{-- Collapsed Hamburger --}}
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="sr-only">Mudar Navegação</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
 
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/produtos/') }}">
+                {{-- Branding Image --}}
+                <a class="navbar-brand" href="{{ route('index') }}">
                     Catálogo
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
+                {{-- Left Side Of Navbar --}}
                 <ul class="nav navbar-nav">
-                    <!-- <li><a href="{{ url('/produtos/') }}">Produtos</a></li> -->
                     @if(Auth::check())
                         <li>
-                        <a href="{{ url('/adicionar-produto/') }}">
+                        <a href="{{ route('produtos.create') }}">
                             <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Novo produto
                         </a>
                         </li>
                     @endif
                 </ul>
 
-                <!-- Right Side Of Navbar -->
+                {{-- Right Side Of Navbar --}}
                 <ul class="nav navbar-nav navbar-right">
+                    {{-- Authentication Links --}}
+                    @if (Auth::check())
+                        <li><a href="{{ url('/register') }}">Registrar</a></li>
+                    @endif
 
-                    <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Registrar</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -77,13 +78,5 @@
     <div class="container">
         @yield('content')
     </div>
-
-    <footer>
-        <div class="container">
-            <p><b>Catálogo de Produtos</b></p>
-            <p>Escrito em Laravel, PHP, Bootstrap e Javascript.</p>
-            <p>Desenvolvido por Marco Vidal.</p>
-        </div>
-    </footer>
 </body>
 </html>

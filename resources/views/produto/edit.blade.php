@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Alterar o produto: '. $produto->titulo)
 @section('content')
-	<h1>Alterar o produto: {{$produto->titulo}}</h1>
+	<h1>Alterar o produto: {{ $produto->titulo }}</h1>
 
 	<!-- Resposta de erro de validação de formulário -->
 	@if(count($errors) > 0)

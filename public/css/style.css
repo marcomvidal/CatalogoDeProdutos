@@ -3,15 +3,7 @@
 
 body {
     font-family: 'Lato';
-}
-
-footer {
-    text-align: center;
-    border-top: 1px solid;
-    border-top-color: rgb(231, 231, 231);
-    padding-top: 20px;
-    margin-top: 20px;
-}
+}s
 
 .fa-btn {
     margin-right: 6px;

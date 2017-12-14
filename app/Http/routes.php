@@ -1,26 +1,24 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
 // Rotas do Laravel
 Route::auth();
 Route::get('/home', 'HomeController@index');
 
-// Rotas de negócio
-Route::get('/', function () {
-    return redirect('/produtos');
+// Página Inicial
+Route::group(['prefix' => ''], function()
+{
+    Route::get('',                  ['as' => 'index',   'uses' => 'ProdutosController@index']);
 });
-Route::resource('produtos', 'ProdutosController');
-Route::get('adicionar-produto', 'ProdutosController@create');
-Route::get('produtos/{id}/editar', 'ProdutosController@edit');
-Route::post('produtos/buscar', 'ProdutosController@buscar');
-Route::get('produtos/{id}/detalhes', 'ProdutosController@show');
+
+// Páginas de Produtos
+Route::group(['as' => 'produtos.', 'prefix' => 'produtos'], function()
+{
+    Route::get('',                  ['as' => 'index',   'uses' => 'ProdutosController@index']);
+    Route::post('',                 ['as' => 'store',   'uses' => 'ProdutosController@store']);
+    Route::get('buscar',            ['as' => 'buscar',  'uses' => 'ProdutosController@buscar']);
+    Route::get('adicionar',         ['as' => 'create',  'uses' => 'ProdutosController@create']);
+    Route::get('detalhes/{id}',     ['as' => 'show',    'uses' => 'ProdutosController@show']);
+    Route::get('editar/{id}',       ['as' => 'edit',    'uses' => 'ProdutosController@edit']);
+    Route::put('{id}',              ['as' => 'update',  'uses' => 'ProdutosController@update']);
+    Route::delete('{id}',           ['as' => 'destroy', 'uses' => 'ProdutosController@destroy']);
+});
