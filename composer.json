@@ -10,7 +10,8 @@
         "twbs/bootstrap": "^3.3",
         "laravelcollective/html": "5.2",
         "barryvdh/laravel-debugbar": "^2.4",
-        "fideloper/proxy": "^3.3"
+        "fideloper/proxy": "^3.3",
+        "csanquer/pdo-service-provider": "~1.1dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
