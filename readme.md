@@ -11,4 +11,4 @@ Projeto de um catálogo para cadastro, consulta e alteração de produtos.
 
 ## Screenshots
 * [Listagem](https://raw.githubusercontent.com/marcomvidal/CatalogoDeProdutos/master/screenshot_geral.png)
-* [Detalhes do Produto](https://raw.githubusercontent.com/marcomvidal/CatalogoDeProdutos/master/screenshot_produto.png)
+* [Detalhes do produto](https://raw.githubusercontent.com/marcomvidal/CatalogoDeProdutos/master/screenshot_produto.png)
